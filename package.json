@@ -1,0 +1,17 @@
+{
+  "name": "cypress-automation-framework",
+  "version": "1.0.0",
+  "description": "Cypress Automation Framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Geta Ulici",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^14.5.0"
+  },
+  "devDependencies": {
+    "@cypress/xpath": "^2.0.3"
+  }
+}
