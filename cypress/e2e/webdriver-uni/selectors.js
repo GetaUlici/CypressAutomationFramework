@@ -1,4 +1,5 @@
 /// <reference types="Cypress" />
+
 describe("Selector examples", () => {
     it("Examples of Selectors via WebdriverUni Contact Us Page", () => {
         cy.visit("http://www.webdriveruniversity.com/Contact-Us/contactus.html");
