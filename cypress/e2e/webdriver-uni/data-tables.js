@@ -17,8 +17,23 @@ describe("Handling data via webdriveruni", () => {
           if (Number(userDetails[i])) {
             numb += Number(userDetails[i]);
           }
-          cy.log(numb);
         }
+        cy.log("Found total age: " + numb);
+        expect(numb).to.eq(322);
       });
   });
+
+it.only("Calculate and assert the age of a given user based on Last Name", () => {
+  cy.get("#thumbnail-1 tr td:nth-child(2)").each(($el, index, $list) => {
+    const text = $el.text()
+    if (text.includes("Woods")) {
+      cy.get("#thumbnail-1 tr td:nth-child(2)").eq(index).next().then(function(age) {
+        const userAge = age.text()
+        expect(userAge).to.equal('80')
+      })
+    }
+  })
+
+})
+
 });
